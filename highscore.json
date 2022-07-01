@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d777e"
+  },
+  "name": "Der Metatron",
+  "highscore": 10000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d777f"
+  },
+  "name": "Sprotte",
+  "highscore": 9000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d7780"
+  },
+  "name": "Ralf",
+  "highscore": 8000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d7781"
+  },
+  "name": "Christian",
+  "highscore": 7000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d7782"
+  },
+  "name": "Serdar",
+  "highscore": 6000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d7783"
+  },
+  "name": "Dennis",
+  "highscore": 5000
+}]
