@@ -1,0 +1,5 @@
+// Ein neues Document anlegen:
+db.products.insertOne({
+  name: "Serdar",
+  highscore: 6000,
+});

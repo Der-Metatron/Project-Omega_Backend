@@ -1,0 +1,33 @@
+// Ein neues Document anlegen:
+db.products.insertOne({
+  name: "Dennis",
+  highscore: 5000,
+});
+
+// Mehrere Documente anlegen
+db.products.insertMany([
+  {
+    name: "Der Metatron",
+    highscore: 10000,
+  },
+  {
+    name: "Sprotte",
+    highscore: 9000,
+  },
+  {
+    name: "Ralf",
+    highscore: 8000,
+  },
+  {
+    name: "Christian",
+    highscore: 7000,
+  },
+  {
+    name: "Serdar",
+    highscore: 6000,
+  },
+  {
+    name: "Dennis",
+    highscore: 5000,
+  },
+]);
