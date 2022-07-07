@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 
 const userSchema = new mongoose.Schema({
-  name: String,
+  nameGamer: String,
   highScore: Number,
 });
 
@@ -18,30 +18,18 @@ const User = mongoose.model("User", userSchema);
 
 // Hauptseite
 app.use(express.json());
-app.get("/", async (req, res) => {
-  let users = [];
-  if (req.query.minage) {
-    users = await User.find({ age: { $gt: req.query.minage } }).exec();
-  } else {
-    users = await User.find().exec();
-  }
-  return res.json(users);
+app.use("/", async (req, res) => {
+  return res.json({ msg: "server is running" });
 });
+/* app.get("/", async (req, res) => {
+  return res.json({ msg: "server is running" });
+});  */
 
 // user update
 
-app.patch("/users/:id", async (req, res) => {
-  try {
-    console.log(req.params.id);
-    await User.findByIdAndUpdate(req.params.id, req.body);
-    res.send("update erfolgreich!!");
-  } catch {
-    res.status(500).send({ massage: "Update gescheitert!" });
-  }
-});
-
 // edit user neuer user eintragen
-app.post("/users/new", async (req, res) => {
+/* app.post("/users/new", async (req, res) => {
+
   try {
     const newUser = new User(req.body);
     const tempUser = await newUser.save();
@@ -49,7 +37,7 @@ app.post("/users/new", async (req, res) => {
   } catch {
     res.status(500).send({ massage: "Eintrag funktioniert nicht!" });
   }
-});
+}); */
 
 mongoose.connect(process.env.MONGO_CONNECTION).then(() => {
   app.listen(port, () => {
