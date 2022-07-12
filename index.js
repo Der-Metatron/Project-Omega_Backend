@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import express from "express";
+import express, { response } from "express";
 import cors from "cors";
 dotenv.config();
 
@@ -14,12 +14,18 @@ const userSchema = new mongoose.Schema({
   highScore: Number,
 });
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema, "players");
 
 // Hauptseite
 app.use(express.json());
-app.use("/", async (req, res) => {
-  return res.json({ msg: "server is running" });
+app.get("/", async (req, res) => {
+  try {
+    const player = await User.find();
+    res.json(player);
+  } catch (error) {
+    console.log(error);
+  }
+  /*   return res.json({ msg: "server is running" }); */
 });
 /* app.get("/", async (req, res) => {
   return res.json({ msg: "server is running" });
