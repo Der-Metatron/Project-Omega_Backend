@@ -1,44 +1,37 @@
-[
-  {
-    "_id": {
-      "$oid": "62bc552ce4687ec87c8d777e"
-    },
-    "name": "Der Metatron",
-    "highscore": 10000
+[{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d777e"
   },
-  {
-    "_id": {
-      "$oid": "62bc552ce4687ec87c8d777f"
-    },
-    "name": "Venz",
-    "highscore": 9000
+  "name": "Der Metatron",
+  "highscore": 10000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d777f"
   },
-  {
-    "_id": {
-      "$oid": "62bc552ce4687ec87c8d7780"
-    },
-    "name": "Ralf",
-    "highscore": 8000
+  "name": "Vens",
+  "highscore": 9000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d7780"
   },
-  {
-    "_id": {
-      "$oid": "62bc552ce4687ec87c8d7781"
-    },
-    "name": "Christian",
-    "highscore": 7000
+  "name": "Ralf",
+  "highscore": 8000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d7781"
   },
-  {
-    "_id": {
-      "$oid": "62bc552ce4687ec87c8d7782"
-    },
-    "name": "Serdar",
-    "highscore": 6000
+  "name": "Christian",
+  "highscore": 7000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d7782"
   },
-  {
-    "_id": {
-      "$oid": "62bc552ce4687ec87c8d7783"
-    },
-    "name": "Dennis",
-    "highscore": 5000
-  }
-]
+  "name": "Serdar",
+  "highscore": 6000
+},{
+  "_id": {
+    "$oid": "62bc552ce4687ec87c8d7783"
+  },
+  "name": "Dennis",
+  "highscore": 5000
+}]
