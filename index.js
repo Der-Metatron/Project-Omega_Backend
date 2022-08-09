@@ -11,6 +11,7 @@ app.use(cors());
 
 const userSchema = new mongoose.Schema({
   nameGamer: String,
+  test: String,
   highScore: Number,
 });
 
@@ -34,16 +35,25 @@ app.get("/", async (req, res) => {
 // user update
 
 // edit user neuer user eintragen
-/* app.post("/users/new", async (req, res) => {
+app.post("/", async (req, res) => {
+  const newUser = new User({
+    nameGamer: req.body.nameGamer,
+    highScore: req.body.highScore,
+    /*   test: req.body.test, */
+  });
+  newUser
+    .save()
+    .then((name) => res.status(200).json(name))
+    .catch((err) => res.status(500).json({ error: "kann nicht " + err }));
 
-  try {
+  /*   try {
     const newUser = new User(req.body);
     const tempUser = await newUser.save();
     return res.json(tempUser);
   } catch {
     res.status(500).send({ massage: "Eintrag funktioniert nicht!" });
-  }
-}); */
+  } */
+});
 
 mongoose.connect(process.env.MONGO_CONNECTION).then(() => {
   app.listen(port, () => {
