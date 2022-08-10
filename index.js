@@ -10,9 +10,8 @@ const app = express();
 app.use(cors());
 
 const userSchema = new mongoose.Schema({
-  nameGamer: String,
-  test: String,
-  highScore: Number,
+  name: String,
+  highscore: Number,
 });
 
 const User = mongoose.model("User", userSchema, "players");
@@ -21,7 +20,7 @@ const User = mongoose.model("User", userSchema, "players");
 app.use(express.json());
 app.get("/", async (req, res) => {
   try {
-    const player = await User.find();
+    const player = await User.find().sort({ highscore: -1 });
     res.json(player);
   } catch (error) {
     console.log(error);
@@ -37,8 +36,8 @@ app.get("/", async (req, res) => {
 // edit user neuer user eintragen
 app.post("/", async (req, res) => {
   const newUser = new User({
-    nameGamer: req.body.nameGamer,
-    highScore: req.body.highScore,
+    name: req.body.name,
+    highscore: req.body.highscore,
     /*   test: req.body.test, */
   });
   newUser
