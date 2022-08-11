@@ -28,10 +28,4 @@
   },
   "name": "Serdar",
   "highscore": 6000
-},{
-  "_id": {
-    "$oid": "62bc552ce4687ec87c8d7783"
-  },
-  "name": "Dennis",
-  "highscore": 5000
 }]
